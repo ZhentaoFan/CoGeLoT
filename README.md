@@ -43,6 +43,7 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
     apt install pipx -y
     pipx ensurepath
     source ~/.bashrc
+    pipx install pdm
     pdm install
     ```
 

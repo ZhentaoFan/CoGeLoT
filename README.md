@@ -39,12 +39,17 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
     apt update
     apt-get update
     apt install nano
+    apt install unzip
     apt-get install git-lfs
     apt install pipx -y
     pipx ensurepath
     source ~/.bashrc
     pipx install pdm
     pdm install
+    cd ..
+    git clone https://huggingface.co/datasets/VIMA/VIMA-Data
+    cd VIMA-Data/
+    git lfs pull
     ```
 
 2. Install the dependencies (I used [PDM](https://pdm-project.org/en/latest/) and Python 3.11)

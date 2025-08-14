@@ -58,7 +58,7 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
 4. Train a model
 
     ```bash
-    pdm run python src/cogelot/entrypoints/train.py experiment=01_their_vima
+    pdm run python src/cogelot/entrypoints/train.py experiment=01_their_vima +trainer.logger={}
     ```
 
 5. Evaluate a model from one of the [provided checkpoints](#model-architectures-and-checkpoints)

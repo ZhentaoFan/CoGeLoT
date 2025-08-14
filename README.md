@@ -37,6 +37,9 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
     git clone https://github.com/ZhentaoFan/CoGeLoT.git
     cd CoGeLoT
     apt update
+    apt-get update
+    apt install nano
+    apt-get install git-lfs
     apt install pipx -y
     pipx ensurepath
     source ~/.bashrc

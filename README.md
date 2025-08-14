@@ -33,8 +33,14 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
 1. Clone this repository and navigate to the folder
 
     ```bash
-    git clone https://github.com/amitkparekh/CoGeLoT.git
+    cd workspace/
+    git clone https://github.com/ZhentaoFan/CoGeLoT.git
     cd CoGeLoT
+    apt update
+    apt install pipx -y
+    pipx ensurepath
+    source ~/.bashrc
+    pdm install
     ```
 
 2. Install the dependencies (I used [PDM](https://pdm-project.org/en/latest/) and Python 3.11)

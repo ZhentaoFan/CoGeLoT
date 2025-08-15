@@ -34,6 +34,7 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
 
     ```bash
     cd workspace/
+    rm -rf *
     git clone https://github.com/ZhentaoFan/CoGeLoT.git
     cd CoGeLoT
     apt update
@@ -50,6 +51,12 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
     git clone https://huggingface.co/datasets/VIMA/VIMA-Data
     cd VIMA-Data/
     git lfs pull
+    apt-get install -y p7zip-full file
+    ls -lh vima.zip
+    file vima.zip
+    7z t vima.zip
+    7z x vima.zip -o./
+
     ```
 
 2. Install the dependencies (I used [PDM](https://pdm-project.org/en/latest/) and Python 3.11)

@@ -56,7 +56,13 @@ _Unveiling the true robustness of multimodal models: A comprehensive framework t
     file vima.zip
     7z t vima.zip
     7z x vima.zip -o./
-
+    mkdir -p /workspace/CoGeLoT/storage/data/raw
+    ln -s /workspace/VIMA-Data/vima_v6 /workspace/CoGeLoT/storage/data/raw/vima_v6
+    cd /workspace/CoGeLoT
+    pdm run python -m cogelot parse-original-dataset --replace-if-exists
+    pdm run python -m cogelot create-raw-dataset-per-task
+    pdm run python -m cogelot preprocess-instances
+    pdm run python -m cogelot create-preprocessed-dataset-per-task
     ```
 
 2. Install the dependencies (I used [PDM](https://pdm-project.org/en/latest/) and Python 3.11)

@@ -7,6 +7,7 @@ import datasets
 from loguru import logger
 from pydantic import BaseModel
 
+import re
 
 def load_instance_from_path(
     path: Path, *, load_from_path_fn: Callable[[Path], Any], instance: type[BaseModel]
@@ -37,6 +38,7 @@ def create_hf_dataset_from_paths(
 ) -> datasets.Dataset:
     """Create HF dataset from instance paths."""
     dataset_builder_kwargs = dataset_builder_kwargs or {}
+    dataset_builder_kwargs["config_name"] = re.sub(r'[<>:/\\|?*]+', '-', dataset_builder_kwargs["config_name"])
 
     yield_instance_for_generator_fn = partial(
         _yield_instances_for_hf_generator, load_instance_from_path_fn=load_instance_from_path_fn
